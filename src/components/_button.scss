@@ -1,0 +1,18 @@
+.btn {
+  opacity: 1;
+  font-family: $rubik-sans;
+  padding: 1rem 2rem;
+  color: $color-white;
+  text-decoration: none;
+  letter-spacing: $Large-letter-spacing;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: $Default-font-wheigt;
+  border: 1px solid $color-white;
+  border-radius: 5px;
+  &:hover {
+    background-color: $color-white;
+    color: $color-black;
+    border-radius: $Default-border-radious;
+  }
+}

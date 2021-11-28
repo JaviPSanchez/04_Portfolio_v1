@@ -1,0 +1,25 @@
+html {
+  font-size: 62.5%; // 1 rem = 10px; 10px/16px = 0.625 = 62.5% (browser default) = 62.5
+}
+body {
+  font-family: $rubik-sans;
+}
+
+h1 {
+  font-weight: $Default-font-wheigt;
+  color: $color-white;
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(3rem);
+  text-transform: uppercase;
+}
+
+p {
+  font-family: $rubik-sans;
+  font-weight: $Bold-font-wheigt;
+  font-size: 5.2rem;
+  color: $color-white;
+  margin-bottom: 3rem;
+  opacity: 0;
+  transform: translateY(3rem);
+}

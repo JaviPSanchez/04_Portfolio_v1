@@ -1,0 +1,47 @@
+.app {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 1rem;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-weight: 300;
+  transition: $blue-atomic $transition;
+
+  & p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::before,
+    &::after {
+      position: absolute;
+
+      content: attr(data-letters);
+
+      transition: all $transition;
+    }
+    &::before {
+      clip-path: polygon(0 0, 100% 0, 100% 80%, 0 30%);
+    }
+    &::after {
+      clip-path: polygon(0 30%, 100% 80%, 100% 100%, 0 100%);
+    }
+    &:hover {
+      color: transparent;
+      &::before,
+      &::after {
+        color: $blue-atomic;
+      }
+      &::before {
+        transform: translate3d(4px, -1px, 0);
+      }
+      &::after {
+        transform: translate3d(-4px, 1px, 0);
+      }
+    }
+  }
+}
