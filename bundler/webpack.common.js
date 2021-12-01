@@ -10,16 +10,6 @@ module.exports = {
     path: path.resolve(__dirname, "../dist"),
   },
   devtool: "source-map",
-  plugins: [
-    new CopyWebpackPlugin({
-      patterns: [{ from: path.resolve(__dirname, "../static") }],
-    }),
-    new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, "../src/index.html"),
-      minify: true,
-    }),
-    new MiniCSSExtractPlugin(),
-  ],
   module: {
     rules: [
       // HTML
@@ -34,18 +24,6 @@ module.exports = {
         exclude: /node_modules/,
         use: ["babel-loader"],
       },
-
-      // CSS
-      {
-        test: /\.scss$/,
-        use: [
-          "style-loader", //3. Inject styles into DOM
-          "css-loader", //2. Turn css into commonjs
-          "sass-loader", //1. Turn sass into css
-        ],
-      },
-
-      // Images
       {
         test: /\.(jpg|png|gif|svg)$/,
         use: [
