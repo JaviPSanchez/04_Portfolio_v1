@@ -1,4 +1,4 @@
-import "./main.scss";
+import "./styles/main.scss";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import * as dat from "dat.gui";
